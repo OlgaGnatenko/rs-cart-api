@@ -1,0 +1,23 @@
+# exclude node modules from docker - modules will be installed in the container
+node_modules/
+npm-debug.log
+
+# exclude build folder from docker - build will be created within the container 
+dist/
+
+# currently we do not need test folder in Docker container; 
+# however, we should include this folder back if we later we update the repo and run some CI/CD that involves tests
+test/
+
+# we will not use prettier and eslint functionality in the container 
+.prettierrc
+.eslintrc.js
+
+# exclude git meta information
+.git/
+
+# exclude cache folder
+.cache
+
+# exclude eb folder 
+.elasticbeanstalk
